@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:session3/Product.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -118,12 +118,13 @@ class Home extends StatelessWidget {
                       width: 100,
                       height: 134,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10),
+                      color: Colors.transparent),
                       child: ColorFiltered(
                         colorFilter: ColorFilter.mode(
                             Colors.transparent, BlendMode.dstOut),
                         child: Image.asset('images/cart2.jpg',
-                            fit: BoxFit.fitHeight),
+                            fit: BoxFit.fitHeight,),
                       ),
                     ),
                   ],
@@ -158,51 +159,19 @@ class Home extends StatelessWidget {
                     SizedBox(
                       width: 8,
                     ),
-                    Container(
-                        width: 140,
-                        height: 140,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              "images/pizza.jpg",
-                              fit: BoxFit.fitHeight,
-                            ))),
+Product(image_name: 'images/pizza.jpg'),
                     SizedBox(
                       width: 8,
                     ),
-                    Container(
-                        width: 140,
-                        height: 140,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              "images/Chicken.jpg",
-                              fit: BoxFit.fitHeight,
-                            ))),
+Product(image_name: "images/Chicken.jpg"),
                     SizedBox(
                       width: 8,
                     ),
-                    Container(
-                        width: 140,
-                        height: 140,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              "images/Fish.jpg",
-                              fit: BoxFit.fitHeight,
-                            ))),
+Product(image_name: "images/Fish.jpg"),
                     SizedBox(
                       width: 8,
                     ),
-                    Container(
-                        width: 140,
-                        height: 140,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.asset(
-                              "images/Macaroni (1).jpg",
-                              fit: BoxFit.fitHeight,
-                            ))),
+                    Product(image_name: "images/Macaroni (1).jpg"),
                   ],
                 ),
               ),
